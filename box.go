@@ -97,7 +97,7 @@ func (b *box) RemoveAllCircles() error {
 	}
 	shift := 0
 	for i := 0; i < len(circleIndexes); i++ {
-		b.ExtractByIndex(i + shift)
+		b.ExtractByIndex(i - shift)
 		shift++
 	}
 	return nil
